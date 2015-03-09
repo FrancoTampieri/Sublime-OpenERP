@@ -1,0 +1,17 @@
+<!-- OpenERP Python Snippets -->
+
+<snippet>
+    <content><![CDATA[
+${1:fldinln$TM_LINE_NUMBER} = fields.Float(
+    string='${2:${1/(.)(.+)/\u$1$2/g}}',
+    required=${3:False},
+    readonly=${4:False},
+    index=${5:0.0},
+    default=${6:None},
+    help=${7:False}
+)
+]]></content>
+    <tabTrigger>fields.Float</tabTrigger>
+    <scope>source.python</scope>
+    <description>float field (OERP)</description>
+</snippet>

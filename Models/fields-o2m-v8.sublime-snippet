@@ -1,0 +1,23 @@
+<!-- OpenERP Python Snippets -->
+
+<snippet>
+    <content><![CDATA[
+${1:fldinln$TM_LINE_NUMBER} = fields.One2many(
+    string='${2:${1/(.)(.+)/\u$1$2/g}}',
+    required=${3:False},
+    readonly=${4:False},
+    index=${5:False},
+    default=${6:None},
+    help=${7:False},
+    comodel_name='${8:model.name}',
+    inverse_name='${9:$1_id}',
+    domain=[${10}],
+    context=\{${11}\},
+    auto_join=${12:False},
+    limit=${13:None}
+)
+]]></content>
+    <tabTrigger>fields.One2many</tabTrigger>
+    <scope>source.python</scope>
+    <description>o2m field (OERP)</description>
+</snippet>

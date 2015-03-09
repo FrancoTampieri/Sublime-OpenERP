@@ -1,0 +1,19 @@
+<!-- OpenERP Python Snippets -->
+
+<snippet>
+    <content><![CDATA[
+${1:fldinln$TM_LINE_NUMBER} = fields.Reference(
+    string='${2:${1/(.)(.+)/\u$1$2/g}}',
+    required=${3:False},
+    readonly=${4:False},
+    index=${5:False},
+    default=${6:0},
+    help=${7:False},
+    selection=[('${8:model.name}', '${9:String}'),('${10:model.name}', '${11:String}')]
+)
+
+]]></content>
+    <tabTrigger>fields.Reference</tabTrigger>
+    <scope>source.python</scope>
+    <description>reference field (OERP)</description>
+</snippet>

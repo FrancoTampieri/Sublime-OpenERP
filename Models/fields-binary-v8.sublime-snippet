@@ -1,0 +1,17 @@
+<!-- OpenERP Python Snippets -->
+
+<snippet>
+    <content><![CDATA[
+${1:fldinln$TM_LINE_NUMBER} = fields.Binary(
+    string='${2:${1/(.)(.+)/\u$1$2/g}}',
+    required=${3:False},
+    readonly=${4:False},
+    index=${5:False},
+    default=${6:0},
+    help=${7:False}
+)
+]]></content>
+    <tabTrigger>fields.Binary</tabTrigger>
+    <scope>source.python</scope>
+    <description>binary field (OERP)</description>
+</snippet>
