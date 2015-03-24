@@ -1,0 +1,10 @@
+<!-- OpenERP Python Snippets -->
+
+<snippet>
+    <content><![CDATA[
+search=lambda self: self._search_${1:field}(operator, value)
+]]></content>
+    <tabTrigger>search</tabTrigger>
+    <scope>source.python</scope>
+    <description>required attributre (OERP)</description>
+</snippet>

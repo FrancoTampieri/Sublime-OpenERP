@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+@api.one
+@api.onchange('${1:field}')
+def _onchange_mailing_state(self):
+    self.${2:update} = ${2:something}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>defonchange</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.python</scope>
+</snippet>

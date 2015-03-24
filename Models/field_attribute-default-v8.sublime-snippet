@@ -1,0 +1,10 @@
+<!-- OpenERP Python Snippets -->
+
+<snippet>
+    <content><![CDATA[
+default=lambda self: self._default_${1:field}(${2})
+]]></content>
+    <tabTrigger>default</tabTrigger>
+    <scope>source.python</scope>
+    <description>translate attribute (OERP)</description>
+</snippet>

@@ -1,0 +1,35 @@
+<!-- OpenERP Python Snippets -->
+
+<snippet>
+    <content><![CDATA[
+class ${1:ModelName}(models.Model):
+    """${2:The summary line for a class docstring should fit on one line.}
+
+    Fields:
+      name (Char): Human readable name which will identify each record.
+
+    """
+
+    _name = '${3:${1/((^[A-Z])|([A-Z]))/(?2:\l$2)(?3:\.\l$3)/g}}'
+    _description = u'${4:Description text}'
+
+    _rec_name = 'name'
+    _order = "create_date DESC"
+
+    name = fields.Char(
+        string='Name',
+        required=True,
+        readonly=False,
+        index=True,
+        default=None,
+        help=False,
+        size=50,
+        translate=True
+    )
+
+    ${5}
+]]></content>
+    <tabTrigger>models.Model</tabTrigger>
+    <scope>source.python</scope>
+    <description>OpenERP Class Generic Model</description>
+</snippet>

@@ -1,0 +1,37 @@
+<snippet>
+	<content><![CDATA[
+<record id="view_${1}" model="ir.ui.view">
+	<field name="name">${2}</field>
+	<field name="model">${3}</field>
+	<field name="type">${4}</field>
+	<field name="mode">primary</field>
+	<field name="active" eval="True" />
+	<field name="inherit_id" ref="${5}" />
+	<field name="priority">16</field>
+	<field name="arch" type="xml">
+		
+	</field>
+</record>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>uiview</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.xml</scope> -->
+</snippet>
+
+<!--
+HELP:
+
+- Valid view types: 
+	- kanban
+	- search
+	- form
+	- diagram
+	- qweb
+	- calendar
+	- tree
+
+-->
+
+<!-- <field name="field_parent" eval="False" /> -->
+<!--<field name="model_data_id"></field>-->

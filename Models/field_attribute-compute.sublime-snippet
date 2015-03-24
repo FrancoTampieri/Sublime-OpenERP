@@ -1,0 +1,11 @@
+<!-- OpenERP Python Snippets -->
+
+<snippet>
+    <content><![CDATA[
+compute=lambda self: self._compute_${1:field}(${3})
+]]>
+]]></content>
+    <tabTrigger>store</tabTrigger>
+    <scope>source.python</scope>
+    <description>store attribute (OERP)</description>
+</snippet>

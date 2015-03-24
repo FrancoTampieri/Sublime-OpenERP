@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+<record id="menu_${1}" model="ir.ui.menu">
+	<field name="name">${2}</field>
+    <field name="action" ref="${3}"/>
+	<field name="parent_id" ref="${4}" />
+	<field name="sequence" eval="10" />
+</record>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>menuitem</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.xml</scope>
+</snippet>
+
+<!--
+	<field name="parent_left"></field>
+	<field name="parent_right"></field>
+	<field name="web_icon_data"></field>
+	<field name="web_icon_hover"></field>
+	<field name="web_icon_hover_data"></field>
+	<field name="icon"></field>
+	<field name="needaction_enabled"></field>
+	<field name="web_icon"></field>
+-->
