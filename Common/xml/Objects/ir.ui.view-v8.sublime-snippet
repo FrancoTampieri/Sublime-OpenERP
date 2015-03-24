@@ -1,20 +1,21 @@
 <snippet>
 	<content><![CDATA[
-<record id="view_${1}" model="ir.ui.view">
-	<field name="name">${2}</field>
-	<field name="model">${3}</field>
-	<field name="type">${4}</field>
-	<field name="mode">primary</field>
-	<field name="active" eval="True" />
-	<field name="inherit_id" ref="${5}" />
-	<field name="priority">16</field>
-	<field name="arch" type="xml">
-		
-	</field>
-</record>
+<record model="ir.ui.view" id="view_${10:${1/(\.)/\_/g}_${2}}">
+    <field name="name">${11:view.${1}.${2}}</field>
+    <field name="model">${1:model.name}</field>
+    <field name="type">${2:tree}</field>
+    <field name="mode">${3:primary}</field>
+    <field name="priority" eval="${4:16}" />
+    <field name="groups_id" ref="${5:base.group_user}" />
+    <field name="active" eval="${6:True}" />
+	<field name="inherit_id" ref="${7:xml_id}" />
+    <field name="arch">
+        ${8}
+    </field>
+</record>${9}
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>uiview</tabTrigger> -->
+	<tabTrigger>ir.ui.view</tabTrigger> -->
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>text.xml</scope> -->
 </snippet>
@@ -22,7 +23,7 @@
 <!--
 HELP:
 
-- Valid view types: 
+- Valid view types:
 	- kanban
 	- search
 	- form
@@ -30,6 +31,10 @@ HELP:
 	- qweb
 	- calendar
 	- tree
+
+- Valid modes:
+	- extension
+	- primary
 
 -->
 

@@ -3,7 +3,7 @@
 <snippet>
     <content><![CDATA[
 @api.model
-def create(self, cr, uid, values, context=None):
+def create(self, values):
     """
         Create a new record for a model ${1:ModelName}
         @param values: provides a data for new record

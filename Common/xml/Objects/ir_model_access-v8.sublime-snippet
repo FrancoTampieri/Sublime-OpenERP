@@ -1,0 +1,18 @@
+<snippet>
+    <content><![CDATA[
+<record id="access_${1:name}" model="ir.model.access">
+    <field name="name">access.${2:${1/(_+)/./g}}</field>
+    <field name="model_id" ref="${3:model_xml_id}"/>
+    <field name="group_id" ref="${4:group_xml_id}"/>
+    <field name="perm_read" eval="${5:True}" />
+    <field name="perm_create" eval="${6:True}" />
+    <field name="perm_write" eval="${7:True}" />
+    <field name="perm_unlink" eval="${8:True}" />
+    <field name="active" eval="${9:True}" />
+</record>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>ir.model.access</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.xml</scope>
+</snippet>

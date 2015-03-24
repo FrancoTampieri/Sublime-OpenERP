@@ -1,14 +1,14 @@
 <snippet>
 	<content><![CDATA[
-<record id="menu_${1}" model="ir.ui.menu">
-	<field name="name">${2}</field>
-    <field name="action" ref="${3}"/>
-	<field name="parent_id" ref="${4}" />
-	<field name="sequence" eval="10" />
-</record>
+<record model="ir.ui.menu" id="menu_${6:${1/(([A-Za-z0-9])|([^A-Za-z0-9]+))/(?2:\l$2)(?3:\_)/g}}" >
+	<field name="name">${1:Name}</field>
+    <field name="action" ref="${2:action_name}" />
+	<field name="parent_id" ref="${3:base.menu_custom}" />
+	<field name="sequence" eval="${4:10}" />
+</record>${5}
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>menuitem</tabTrigger>
+	<tabTrigger>ir.ui.menu</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>text.xml</scope>
 </snippet>
