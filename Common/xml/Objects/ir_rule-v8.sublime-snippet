@@ -1,6 +1,6 @@
 <snippet>
     <content><![CDATA[
-<record id="${1:name}_rule" model="ir.rule">
+<record model="ir.rule" id="${1:name}_rule">
     <field name="name">${2:${1/(_+)/./g}.rule}</field>
     <field name="model_id" ref="${3:model_xml_id}"/>
     <field name="global" eval="${4:True}" />

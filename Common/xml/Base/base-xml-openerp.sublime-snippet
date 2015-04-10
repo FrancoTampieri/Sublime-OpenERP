@@ -1,11 +1,17 @@
 <!-- OpenERP XML Snippets -->
 
 <snippet>
-    <content><![CDATA[<openerp>
+    <content><![CDATA[
+<?xml version="1.0" ?>
+
+<openerp noupdate="${1:1}">
     <data>
-        $0
-    </data>
-</openerp>]]></content>
+
+        ${2}
+
+    </data
+</openerp>
+]]></content>
     <tabTrigger>openerp</tabTrigger>
     <scope>text.xml</scope>
     <description>OpenERP Base XML File</description>
