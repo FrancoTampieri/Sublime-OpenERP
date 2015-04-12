@@ -1,0 +1,13 @@
+<snippet>
+    <content><![CDATA[
+import logging
+
+${1:_logger} = logging.getLogger(${2:__name__})
+
+${3}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>_logger</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.python</scope>
+</snippet>

@@ -1,0 +1,51 @@
+<!-- OpenERP Python Snippets -->
+
+<snippet>
+    <content><![CDATA[
+class ${1:ModelName}(models.Model):
+    """${2:The summary line for a class docstring should fit on one line.}
+
+    Fields:
+      name (Char): Human readable name which will identify each record.
+
+    """
+
+    _name = '${3:${1/((^[A-Z])|([A-Z]))/(?2:\l$2)(?3:\.\l$3)/g}}'
+    _description = u'${4:Description text}'
+
+    _auto = False
+    _table = '${5:${3/(\.+)/\_/g}}'
+
+    _rec_name = 'name'
+    _order = "name DESC"
+
+    name = fields.Char(
+        string='Name',
+        required=True,
+        readonly=False,
+        index=True,
+        default=None,
+        help=False,
+        size=50,
+        translate=True
+    )
+
+    def init(self, cr):
+        sql_query = """
+            ${6:select * from ir_model_data}
+        """
+
+        tools.drop_view_if_exists(cr, self._table)
+
+        cr.execute("""
+            create or replace view {} as (
+                {}
+            )
+        """.format(self._table, sql_query))
+    ${7}
+]]></content>
+    <tabTrigger>models.Model</tabTrigger>
+    <scope>source.python</scope>
+    <description>OpenERP non auto-created model</description>
+</snippet>
+

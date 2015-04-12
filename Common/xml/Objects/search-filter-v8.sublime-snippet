@@ -1,0 +1,13 @@
+<snippet>
+    <content><![CDATA[
+<filter string="${1:Name}"
+    name="${2:${1/(([A-Za-z0-9])|( )|([^A-Za-z0-9]+))/(?2:\l$2)(?3:\_)(?4:\_)/g}}"
+    domain="${3:[]}"
+    context="${4:{}}"
+    help="${5}" />
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>filter</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.xml</scope>
+</snippet>

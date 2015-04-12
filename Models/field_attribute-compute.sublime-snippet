@@ -5,7 +5,7 @@
 compute=lambda self: self._compute_${1:field}(${3})
 ]]>
 ]]></content>
-    <tabTrigger>store</tabTrigger>
+    <tabTrigger>compute</tabTrigger>
     <scope>source.python</scope>
-    <description>store attribute (OERP)</description>
+    <description>compute attribute (OERP)</description>
 </snippet>

@@ -9,7 +9,7 @@
     <field name="groups_id" ref="${5:base.group_user}" />
     <field name="active" eval="${6:True}" />
 	<field name="inherit_id" ref="${7:xml_id}" />
-    <field name="arch">
+    <field name="arch" type="xml">
         ${8}
     </field>
 </record>${9}
