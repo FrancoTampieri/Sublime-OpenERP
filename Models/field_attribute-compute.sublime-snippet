@@ -3,7 +3,6 @@
 <snippet>
     <content><![CDATA[
 compute=lambda self: self._compute_${1:field}(${3})
-]]>
 ]]></content>
     <tabTrigger>compute</tabTrigger>
     <scope>source.python</scope>
