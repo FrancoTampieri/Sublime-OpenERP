@@ -2,10 +2,10 @@
 
 <snippet>
     <content><![CDATA[
-<?xml version="1.0" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 
-<openerp noupdate="${1:1}">
-    <data>
+<openerp">
+    <data noupdate="${1:1}>
 
         ${2}
 
