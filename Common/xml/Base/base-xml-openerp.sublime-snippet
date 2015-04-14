@@ -4,7 +4,7 @@
     <content><![CDATA[
 <?xml version="1.0" encoding="UTF-8"?>
 
-<openerp">
+<openerp>
     <data noupdate="${1:1}">
 
         ${2}
