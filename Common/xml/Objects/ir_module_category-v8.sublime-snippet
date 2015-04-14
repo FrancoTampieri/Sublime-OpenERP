@@ -1,0 +1,33 @@
+<snippet>
+    <content><![CDATA[
+<record model="ir.module.category" id="module_category_${7:${1/(([A-Za-z0-9])|([^A-Za-z0-9]+))/(?2:\l$2)(?3:\_)/g}}">
+    <field name="name">${1:Human readable name}</field>
+    <field name="parent_id" ref="${2}" />
+    <field name="description">${3}</field>
+    <field name="sequence" eval="${4:10=>group_categories / 0=>module categories}" />
+    <field name="visible" eval="${5:True}" />
+</record>${6}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>ir.module.category</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.xml</scope>
+</snippet>
+
+
+
+<!--
+
+# About
+
+Some notes about this snippet
+
+## Sequence
+
+When I counted how many records there were in ir module category table, with
+each of the distinct values, after a basic Odoo installation, twenty four (24)
+had the 0 as sequence value and six (6) had the 10. The firsts of them were
+categories used in modules and the seconds were categories used as group
+categories.
+
+-->

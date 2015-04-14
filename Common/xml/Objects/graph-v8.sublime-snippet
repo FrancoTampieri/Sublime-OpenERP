@@ -1,0 +1,14 @@
+<snippet>
+    <content><![CDATA[
+<graph string="${1:Graph title}" type="${2:one # bar # pie # line # pivot}">
+    <field type="row" name="${3:row_field}" />
+    <field type="col" name="${4:col_field}" interval="month" />
+    <field type="measure" name="${5:measure_field}" />
+</graph>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>graph</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.xml</scope>
+</snippet>
+
