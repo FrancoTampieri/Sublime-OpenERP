@@ -2,8 +2,8 @@
 	<content><![CDATA[
 @api.one
 @api.onchange('${1:field}')
-def _onchange_mailing_state(self):
-    self.${2:update} = ${2:something}
+def _onchange_${2:${1}}(self):
+    self.${3:update} = ${4:self.${1}}
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>defonchange</tabTrigger>
