@@ -3,7 +3,7 @@
 <snippet>
     <content><![CDATA[
 class ${1:ModelName}(models.Model):
-    """${2:The summary line for a class docstring should fit on one line.}
+    """ ${2:The summary line for a class docstring should fit on one line.}
 
     Fields:
       name (Char): Human readable name which will identify each record.
@@ -14,7 +14,7 @@ class ${1:ModelName}(models.Model):
     _description = u'${4:Description text}'
 
     _rec_name = 'name'
-    _order = "create_date DESC"
+    _order = 'name ASC'
 
     name = fields.Char(
         string='Name',

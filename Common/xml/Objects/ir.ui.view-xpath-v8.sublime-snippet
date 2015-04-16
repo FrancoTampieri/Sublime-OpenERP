@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[
+<xpath expr="${1://field[@name='name']}" position="${2:after}">
+    ${3}
+</xpath>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>xpath</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.xml</scope>
+</snippet>

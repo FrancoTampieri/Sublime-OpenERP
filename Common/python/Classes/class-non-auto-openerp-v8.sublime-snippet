@@ -17,7 +17,7 @@ class ${1:ModelName}(models.Model):
     _table = '${5:${3/(\.+)/\_/g}}'
 
     _rec_name = 'name'
-    _order = "name DESC"
+    _order = 'name ASC'
 
     name = fields.Char(
         string='Name',

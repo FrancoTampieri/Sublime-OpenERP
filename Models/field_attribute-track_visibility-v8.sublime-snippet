@@ -1,0 +1,14 @@
+<snippet>
+    <content><![CDATA[
+track_visibility='${1:onchange}',
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>track_visibility</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.python</scope>
+</snippet>
+
+
+<!--
+      # Can be onchange or always
+-->

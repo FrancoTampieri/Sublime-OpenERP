@@ -1,0 +1,17 @@
+<snippet>
+    <content><![CDATA[
+<record model="ir.model.data" id="${8:${3/(\.+)/_/g}_${1/(\.+)/_/g}}">
+    <field name="name">${1:resource_external_id}</field>
+    <field name="model">${2:name.of.model}</field>
+    <field name="module">${3:name_of_module}</field>
+    <field name="date_init" eval="${4:time.strftime('%Y-%m-%d %H:%M:%S')}" />
+    <field name="date_update" eval="${5:time.strftime('%Y-%m-%d %H:%M:%S')}" />
+    <field name="res_id" eval="${6:1}" />
+    <field name="noupdate" eval="${7:True}" />
+</record>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>ir.model.data</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.xml</scope>
+</snippet>
