@@ -1,0 +1,20 @@
+<snippet>
+    <content><![CDATA[
+@api.model
+def create(self, values):
+    """ Creates a new record for the model and initialized it using the values
+        from ``values`` and if necessary those from :meth:`~.default_get`
+
+        :param dict values: values for the model's fields, as a dictionary
+        :return bool: True if done False otherwise.
+    """
+
+    result = super(${1:ClassName}, self).create(values)
+
+    return result
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>defcreate</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.python</scope>
+</snippet>
