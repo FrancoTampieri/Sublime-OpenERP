@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+attrs="{${1:'invisible':[('','','')], }${2:'readonly':[('','','')], }${3:'required':[('','','')]}}"
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>attrs</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.xml</scope>
+</snippet>
