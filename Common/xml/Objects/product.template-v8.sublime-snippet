@@ -1,0 +1,24 @@
+<snippet>
+    <content><![CDATA[
+<record model="product.template" id="${18:${1/(([A-Za-z0-9])|([^A-Za-z0-9]+))/(?2:\l$2)(?3:\_)/g}_product_template}">
+    <field name="name">${1:Human readable name}</field>
+    <field name="description">${2:Description}</field>
+    <field name="description_purchase">${3:${2:Description}}</field>
+    <field name="description_sale">${4:${2:Description}}</field>
+    <field name="categ_id" ref="${5:product.category}"/>
+    <field name="standard_price">${6:0.0}</field>
+    <field name="list_price">${7:0.0}</field>
+    <field name="type">${8:consu|service}</field>
+    <field name="uom_id" ref="${9:product.uom}"/>
+    <field name="uom_po_id" ref="${10:product.uom}"/>
+    <field name="taxes_id" eval="[(4, ref('${11:account.tax}'))]" />
+${13:    <field name="image" type="base64" file="${12:module_name/static/img/file_name.png}"/>
+}${15:    <field name="default_code">${14:PRODUCT-CODE}</field>
+}${17:    <field name="ean13">${16:0000000000000}</field>
+}</record>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>product.template</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.xml</scope>
+</snippet>

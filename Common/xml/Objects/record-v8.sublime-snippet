@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[
+<record model="${1:model.name}" id="${2:${1/(\.+)/\_/g}}">
+    ${0}
+</record>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>record</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.xml</scope>
+</snippet>
