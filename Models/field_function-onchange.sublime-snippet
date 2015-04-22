@@ -1,15 +1,19 @@
 <snippet>
 	<content><![CDATA[
-# @api.one
 @api.onchange('${1:field}')
 def _onchange_${2:${1}}(self):
-    ${3:{
-        ${4:'warning': {'title': '${5:Text of the title}', 'message': '${6:Text of the message}'}},
-        ${7:'domain': {${8:'field_name': [('field_name', '=', value)]}}},
-        ${8:'value': {
-        ${10:'field_name': field_value,}
-        }}
-    }}
+    return {
+        'warning': {
+            'title': '${3:Text of the title}',
+            'message': '${4:Text of the message}'
+        },
+        'domain': {
+            ${5:'other_field': [('other_field', '=', value)]},
+        },
+        'value': {
+            ${6:'other_field': value,}
+        }
+    }${0}
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>defonchange</tabTrigger>
@@ -17,3 +21,8 @@ def _onchange_${2:${1}}(self):
 	<scope>source.python</scope>
 </snippet>
 
+<!-- Comments:
+
+If function don't return a value, it can have an @api.one decorator
+
+-->
