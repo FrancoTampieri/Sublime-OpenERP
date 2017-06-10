@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+<field name="${1:field_name}" invisible="${2:0}" readonly="${3:0}" required="${4:0}"${11:
+    ${6:placeholder="${5:Describe the item...}"} ${8:widget="${7:text}"} ${10:string="${9:Human readable name}"}} />
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>field</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.xml</scope>
+</snippet>

@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[
+<tree string="${1:Caption}" create="${2:1}" delete="${3:1}" edit="${4:1}"${5: editable="${6:top}"}>
+    <field name="name" />
+</tree>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>tree</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.xml</scope>
+</snippet>

@@ -1,0 +1,42 @@
+<snippet>
+	<content><![CDATA[
+<record model="ir.actions.act_window" id="action_${14:${1/(([A-Za-z0-9])|([^A-Za-z0-9]+))/(?2:\l$2)(?3:\_)/g}}_act_window">
+    <field name="type">ir.actions.act_window</field>
+    <field name="name">${1:Name}</field>
+    <field name="res_model">${3:model.name}</field>
+    <field name="view_mode">${4:kanban,tree,form,calendar,graph,diagram,gantt,qweb,list}</field>
+    <field name="view_type">${5:form}</field>
+    <field name="target">${6:current}</field>
+    <field name="limit" eval="${7:80}" />
+    <field name="domain">[${8:}]</field>
+    <field name="context">{${9:}}</field>
+    <field name="auto_search" eval="${10:True}" />
+    <field name="search_view_id" ref="${11}" />
+</record>${12}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ir.actions.act_window</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.xml</scope>
+</snippet>
+
+<!--
+HELP:
+
+- Valid targets:
+    - current
+    - inline
+    - new
+
+
+EXTRA
+    <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+        Click to execute this view
+        </p>
+    </field>
+    <field name="views" eval="[]" />
+    <field name="res_id" ref="" />
+    <field name="view_id" ref="" />
+    <field name="view_ids" ref="">/
+-->

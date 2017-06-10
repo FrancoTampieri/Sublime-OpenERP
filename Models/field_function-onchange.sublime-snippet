@@ -1,0 +1,28 @@
+<snippet>
+	<content><![CDATA[
+@api.onchange('${1:field}')
+def _onchange_${2:${1}}(self):
+    return {
+        'warning': {
+            'title': '${3:Text of the title}',
+            'message': '${4:Text of the message}'
+        },
+        'domain': {
+            ${5:'other_field': [('other_field', '=', value)]},
+        },
+        'value': {
+            ${6:'other_field': value,}
+        }
+    }${0}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>defonchange</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.python</scope>
+</snippet>
+
+<!-- Comments:
+
+If function don't return a value, it can have an @api.one decorator
+
+-->

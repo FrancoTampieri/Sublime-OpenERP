@@ -1,0 +1,24 @@
+<!-- OpenERP Python Snippets -->
+
+<snippet>
+    <content><![CDATA[
+${1:fldinln$TM_LINE_NUMBER} = fields.Many2many(
+    string='${2:${1/(.)(.+)/\u$1$2/g}}',
+    required=${3:False},
+    readonly=${4:False},
+    index=${5:False},
+    default=${6:None},
+    help=${7:False},
+    comodel_name='${8:model.name}',
+    relation='${9:${8/\./_/g}_this_model_rel}',
+    column1='${10:${8/\./_/g}_id}}',
+    column2='${11:this_model_id}',
+    domain=[${12}],
+    context=\{${13}\},
+    limit=${14:None}
+)
+]]></content>
+    <tabTrigger>fields.Many2many</tabTrigger>
+    <scope>source.python</scope>
+    <description>m2m field (OERP)</description>
+</snippet>

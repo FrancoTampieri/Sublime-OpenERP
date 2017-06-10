@@ -1,0 +1,15 @@
+<snippet>
+    <content><![CDATA[
+<record model="res.groups" id="group_${8:${1/(([A-Za-z0-9])|([^A-Za-z0-9]+))/(?2:\l$2)(?3:\_)/g}}">
+    <field name="name">${1:Name}</field>
+    <field name="comment">${2:Comment}</field>
+    <field name="category_id" ref="${3:base.module_category_administration}"/>
+    <field name="implied_ids" eval="[(4, ref('${5:base.group_user}'))]"/>
+    <field name="users" eval="[(5, ref('${6:base.user_root}'))]" />
+</record>${7}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>res.groups</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.xml</scope>
+</snippet>

@@ -1,0 +1,42 @@
+<snippet>
+	<content><![CDATA[
+<record model="ir.ui.view" id="view_${10:${1/(\.)/\_/g}_${2}}">
+    <field name="name">${11:view.${1}.${2}}</field>
+    <field name="model">${1:model.name}</field>
+    <field name="type">${2:tree}</field>
+    <field name="mode">${3:primary}</field>
+    <field name="priority" eval="${4:16}" />
+    <field name="groups_id" ref="${5:base.group_user}" />
+    <field name="active" eval="${6:True}" />
+	<field name="inherit_id" ref="${7:xml_id}" />
+    <field name="arch" type="xml">
+        ${8}
+    </field>
+</record>${9}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ir.ui.view</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.xml</scope> -->
+</snippet>
+
+<!--
+HELP:
+
+- Valid view types:
+	- kanban
+	- search
+	- form
+	- diagram
+	- qweb
+	- calendar
+	- tree
+
+- Valid modes:
+	- extension
+	- primary
+
+-->
+
+<!-- <field name="field_parent" eval="False" /> -->
+<!--<field name="model_data_id"></field>-->

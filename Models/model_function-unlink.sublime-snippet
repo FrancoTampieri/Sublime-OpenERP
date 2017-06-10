@@ -1,0 +1,18 @@
+<snippet>
+    <content><![CDATA[
+@api.multi
+def unlink(self):
+    """ Deletes the records of the current set
+
+        :return bool: True if done False otherwise.
+    """
+
+    result = super(${1:ClassName}, self).unlink()
+
+    return result
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>defunlink</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.python</scope>
+</snippet>

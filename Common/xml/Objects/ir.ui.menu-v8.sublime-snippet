@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+<record model="ir.ui.menu" id="menu_${6:${1/(([A-Za-z0-9])|([^A-Za-z0-9]+))/(?2:\l$2)(?3:\_)/g}}" >
+	<field name="name">${1:Name}</field>
+    <field name="action" ref="${2:action_name}" />
+	<field name="parent_id" ref="${3:base.menu_custom}" />
+	<field name="sequence" eval="${4:10}" />
+</record>${5}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ir.ui.menu</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.xml</scope>
+</snippet>
+
+<!--
+	<field name="parent_left"></field>
+	<field name="parent_right"></field>
+	<field name="web_icon_data"></field>
+	<field name="web_icon_hover"></field>
+	<field name="web_icon_hover_data"></field>
+	<field name="icon"></field>
+	<field name="needaction_enabled"></field>
+	<field name="web_icon"></field>
+-->

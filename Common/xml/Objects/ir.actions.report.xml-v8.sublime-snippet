@@ -1,0 +1,43 @@
+<snippet>
+    <content><![CDATA[
+<record model="ir.actions.report.xml" id="action_report_${15:${1/(([A-Za-z0-9])|([^A-Za-z0-9]+))/(?2:\l$2)(?3:\_)/g}}">
+    <field name="type">ir.actions.report.xml</field>
+    <field name="name">${1:Name}</field>
+    <field name="model">${2:model.name}</field>
+    <field name="report_name">${3:${1/(([A-Za-z0-9])|( )|([^A-Za-z0-9]+))/(?2:\l$2)(?3:\.)(?4:\_)/g}}</field>
+    <field name="report_type">${4:qweb-pdf}</field>
+    <field name="report_file">${5:${1/(([A-Za-z0-9])|([^A-Za-z0-9]+))/(?2:\l$2)(?3:\_)/g}}</field>
+    <field name="report_rml">${6:${1/(([A-Za-z0-9])|([^A-Za-z0-9]+))/(?2:\l$2)(?3:\_)/g}}</field>
+    <field name="attachment">${7:(object.filename+'.pdf')}</field>
+    <field name="attachment_use" eval="${8:True}" />
+    <field name="paperformat_id" ref="${9:report.paperformat_euro}" />
+    <field name="auto" eval="${10:True}" />
+    <field name="header" eval="${11:True}" />
+    <field name="multi" eval="${12:False}" />
+    <field name="help">${13}</field>
+</record>${14}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>ir.actions.report.xml</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.xml</scope>
+</snippet>
+
+
+<!--
+
+HELP
+
+- Valid values for report_type field:
+    - sxw
+    - pdf
+    - qweb-pdf
+
+
+    <field name="report_xsl">${7}</field>
+    <field name="report_xml">${8}</field>
+    <field name="report_rml_content_data"></field>
+    <field name="report_sxw_content_data"></field>
+    <field name="usage"></field>
+    <field name="parser"></field>
+-->

@@ -1,0 +1,19 @@
+<!-- OpenERP Python Snippets -->
+
+<snippet>
+    <content><![CDATA[
+@api.one
+def copy(self, default=None):
+    """
+        Create a new record in ${1:ModelName} model from existing one
+        @param default: dict which contains the values to be override during
+        copy of object
+
+        @return: returns a id of newly created record
+    """
+
+    return super(${1:ModelName}, self).copy(default)]]></content>
+    <tabTrigger>def</tabTrigger>
+    <scope>source.python</scope>
+    <description>Method copy Odoo</description>
+</snippet>

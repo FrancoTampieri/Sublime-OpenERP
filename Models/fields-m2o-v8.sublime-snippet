@@ -1,0 +1,22 @@
+<!-- OpenERP Python Snippets -->
+
+<snippet>
+    <content><![CDATA[
+${1:fldinln$TM_LINE_NUMBER} = fields.Many2one(
+    string='${2:${1/(.)(.+)/\u$1$2/g}}',
+    required=${3:False},
+    readonly=${4:False},
+    index=${5:False},
+    default=${6:None},
+    help=${7:False},
+    comodel_name='${8:model.name}',
+    domain=[${9}],
+    context=\{${10}\},
+    ondelete='${11:cascade}',
+    auto_join=${12:False}
+)
+]]></content>
+    <tabTrigger>fields.Many2one</tabTrigger>
+    <scope>source.python</scope>
+    <description>m2o field (OERP)</description>
+</snippet>

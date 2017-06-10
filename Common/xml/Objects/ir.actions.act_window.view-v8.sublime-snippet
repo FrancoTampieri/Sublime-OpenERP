@@ -1,0 +1,15 @@
+<snippet>
+    <content><![CDATA[
+<record model="ir.actions.act_window.view" id="${1:action_external_id_view_external_id}">
+    <field name="sequence" eval="${2:1}" />
+    <field name="act_window_id" ref="${3:action_external_id}" />
+    <field name="view_id" ref="${4:view_external_id}" />
+    <field name="view_mode">${5:tree}</field>
+    <field name="multi" eval="${6:False}" />
+</record>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>ir.actions.act_window.view</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.xml</scope>
+</snippet>

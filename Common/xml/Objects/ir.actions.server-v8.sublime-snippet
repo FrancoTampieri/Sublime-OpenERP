@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+<record model="ir.actions.server" id="action_${9:${1/(([A-Za-z0-9])|([^A-Za-z0-9]+))/(?2:\l$2)(?3:\_)/g}}_server">
+    <field name="type">ir.actions.server</field>
+    <field name="name">${1:Name}</field>
+    <field name="model_id" ref="${3}.model_${4}" />
+    <field name="condition" eval="${5:True}" />
+    <field name="context" eval="{${6}}" />
+    <field name="code">action = pool.get('${7:${4/\_/\./g}}').browse(cr, uid, 1, context=context)</field>
+</record>${8}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ir.actions.server</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.xml</scope>
+</snippet>

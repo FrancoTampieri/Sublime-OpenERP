@@ -1,0 +1,17 @@
+<snippet>
+    <content><![CDATA[
+${1:fldinln$TM_LINE_NUMBER} = fields.Selection(
+    string='${2:${1/(.)(.+)/\u$1$2/g}}',
+    required=${3:False},
+    readonly=${4:False},
+    index=${5:False},
+    default=${6:0},
+    help=${7:False},
+    selection=[('${8:valor1}', '${9:${8/(.)(.+)/\u$1$2/g}}'), ('${10:valor2}', '${11:${10/(.)(.+)/\u$1$2/g}}')]
+)
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>fields.Selection</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.python</scope>
+</snippet>

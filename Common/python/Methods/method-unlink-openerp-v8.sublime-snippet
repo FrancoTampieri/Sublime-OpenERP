@@ -1,0 +1,20 @@
+<!-- OpenERP Python Snippets -->
+
+<snippet>
+    <content><![CDATA[
+@api.multi
+def unlink(self):
+    """
+        Delete all record(s) from recordset
+        return True on success, False otherwise
+
+        @return: True on success, False otherwise
+
+        #TODO: process before delete resource
+    """
+
+    return super(${1:ModelName}, self).unlink()]]></content>
+    <tabTrigger>def</tabTrigger>
+    <scope>source.python</scope>
+    <description>Method unlink Odoo</description>
+</snippet>
